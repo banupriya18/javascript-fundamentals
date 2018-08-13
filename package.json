@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "jest": "^23.5.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "objects:exercise1": "jest __tests__/Objects/Exercise1 --notify --watch",
+    "functions:exercise1": "jest __tests__/Functions/Exercise1 --notify --watch",
+    "functions:exercise2": "jest __tests__/Functions/Exercise2 --notify --watch",
+    "classes:exercise1": "jest __tests__/Classes/Exercise1 --notify --watch",
+    "classes:exercise2": "jest __tests__/Classes/Exercise2 --notify --watch",
+    "arrays:exercise1": "jest __tests__/Arrays/Exercise1 --notify --watch",
+    "arrays:exercise2": "jest __tests__/Arrays/Exercise2 --notify --watch"
+  }
+}
