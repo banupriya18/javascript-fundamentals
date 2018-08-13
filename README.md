@@ -4,7 +4,7 @@
 
 #### Introduction
 
-This repository exists to introduce you to the fundamental concepts that make up the JavaScript language. Here we cover the following :
+This repository introduces you to the fundamental concepts of the JavaScript language using a hands-on approach. Here we cover the following :
 
 - Objects
 - Arrays
