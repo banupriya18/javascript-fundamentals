@@ -68,11 +68,11 @@ The test suite has been configured to run automatically every time you save the 
 
 | Topic     | Exercise  | Test Command                     |
 | --------- | --------- | -------------------------------- |
-| Objects   | Exercise1 | `sh npm run objects:exercise1`   |
+| Objects   | Exercise1 | `npm run objects:exercise1`   |
 | Objects   | Exercise2 | **No tests for this exercise**   |
-| Functions | Exercise1 | `sh npm run functions:exercise1` |
-| Functions | Exercise2 | `sh npm run functions:exercise2` |
-| Classes   | Exercise1 | `sh npm run classes:exercise1`   |
-| Classes   | Exercise2 | `sh npm run classes:exercise2`   |
-| Arrays    | Exercise1 | `sh npm run arrays:exercise1`    |
-| Arrays    | Exercise2 | `sh npm run arrays:exercise2`    |
+| Functions | Exercise1 | `npm run functions:exercise1` |
+| Functions | Exercise2 | `npm run functions:exercise2` |
+| Classes   | Exercise1 | `npm run classes:exercise1`   |
+| Classes   | Exercise2 | `npm run classes:exercise2`   |
+| Arrays    | Exercise1 | `npm run arrays:exercise1`    |
+| Arrays    | Exercise2 | `npm run arrays:exercise2`    |
