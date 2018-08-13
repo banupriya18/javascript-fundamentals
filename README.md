@@ -46,7 +46,9 @@ If you get stuck when trying to complete an exercise, refer back to the topic's 
 
 If, for some reason, the `Introduction.md` file does not help solving your bug / issue, refer the [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) documentation.
 
-##### How do I know my solution is right ?
+---
+
+#### How do I know my solution is right ?
 
 This repository uses the `jest` testing framework to ensure your solutions to the exercises are correct.
 
@@ -61,6 +63,8 @@ npm run arrays:exercise1
 **All test commands follow the pattern `topic:exercise{number}`.**
 
 The test suite has been configured to run automatically every time you save the corresponding file.
+
+#### Test command reference
 
 | Topic     | Exercise  | Test Command                     |
 | --------- | --------- | -------------------------------- |
