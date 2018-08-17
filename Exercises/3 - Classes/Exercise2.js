@@ -28,9 +28,38 @@
  */
 
 // TODO: your code goes here
+class Todo {
+  constructor(id, title, completed=false) {
+    this.id = id;
+    this.title = title;
+    this.completed = completed;
+  }
 
-// uncomment the line below once you have written your code
-// module.exports.Todo = Todo;
+  markComplete() {
+    if (!this.completed) {
+      return this.completed = true;
+    }
+  }
+
+  markIncomplete() {
+    if (this.completed) {
+        return this.completed = false;
+    }
+  }
+}
+
+const todo = new Todo(1, "Go to the Market", false);
+console.log(todo.id);
+console.log(todo.title);
+console.log(todo.completed);
+
+todo.markComplete();
+console.log(todo.completed);
+
+todo.markIncomplete();
+console.log(todo.completed);
+
+module.exports.Todo = Todo;
 
 /**
  * 2 - Create two classes - Animal and Dog
@@ -51,6 +80,27 @@
  */
 
 // TODO: your code goes here
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    return `It can speak`;
+  }
+}
+class Dog extends Animal {
+  constructor(name, breed, isay) {
+    super(name, breed, isay);
+    this.breed = breed;
+    this.isay = isay;
+  }
+  speak() {
+    return this.isay;
+  }
+}
+const dog = new Dog("Shadow", "german-shepherd", "bowbow");
+console.log(dog.name);
+console.log(dog.breed);
+console.log(dog.speak());
 
-// uncomment the line below once you have written your code
-// module.exports.Dog = Dog;
+module.exports.Dog = Dog;

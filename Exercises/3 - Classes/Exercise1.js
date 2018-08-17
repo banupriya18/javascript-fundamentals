@@ -4,9 +4,12 @@
  */
 
 // TODO: your code goes here
-
-// uncomment the line below once you have written the code
-// module.exports.User = User;
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+}
+module.exports.User = User;
 
 /**
  * 2 - Create a Human class, using the function syntax
@@ -16,9 +19,18 @@
  */
 
 // TODO: your code goes here
+class Human {
+    constructor(name){
+        this.name=name;
+    }
+  sayHi() {
+    return "Hi";
+  }
+}
+var john = new Human("John");
+john.sayHi();
 
-// uncomment the line below once you have written the code
-// module.exports.Human = Human;
+module.exports.Human = Human;
 
 /**
  * 3 - Create a Person class that inherits from Human.
@@ -36,6 +48,18 @@
  */
 
 // TODO: your code goes here
+class Person extends Human {
+  constructor(name, gender, age) {
+    super(name);
+    this.gender = gender;
+    this.age = age;
+  }
+  //super(name);
+}
+var person = new Person("John", "male", 30);
+console.log(person.name);
+console.log(person.gender);
+console.log(person.age);
+console.log(person.sayHi());
 
-// uncomment the line below once you have written the code
-// module.exports.Person = Person;
+module.exports.Person = Person;

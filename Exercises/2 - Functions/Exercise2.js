@@ -62,36 +62,20 @@ module.exports.createPerson = createPerson;
  */
 
 // TODO: your code goes here
-// function AnimalCreator(username, species, tagline, noises, friends) {
-//   this.username= username;
-//   this.species= species;
-//   this.tagline= tagline;
-//   this.noises= noises;
-//   this.friends= friends;
-// }
-
-// var sheep = new AnimalCreator("Cloud",
-//   "sheep",
-//   "You can count on me!",
-//   ["baahhh", "arrgg", "chewchewchew"],[]);
-// console.log(sheep);
-function AnimalCreator(username, species, tagline, noises, friends) {
-  return {
-    username: username,
-    species: species,
-    tagline: tagline,
-    noises: noises,
-    friends: friends
-  };
+function AnimalCreator(username, species, tagline, noises,friends) {
+  this.username= username;
+  this.species= species;
+  this.tagline= tagline;
+  this.noises= noises;
+  this.friends=friends;
 }
-var sheep = AnimalCreator(
-  "Cloud",
+
+var sheep = new AnimalCreator("Cloud",
   "sheep",
   "You can count on me!",
-  ["baahhh", "arrgg", "chewchewchew"],
-  ["cow", "dog"]
-);
+  ["baahhh", "arrgg", "chewchewchew"],[]);
 console.log(sheep);
+
 module.exports.AnimalCreator = AnimalCreator;
 
 /**
@@ -111,13 +95,28 @@ module.exports.AnimalCreator = AnimalCreator;
  */
 
 // TODO: your code goes here
+// function AnimalCreator(username, species, tagline, noises, friends) {
+//   this.username= username;
+//   this.species= species;
+//   this.tagline= tagline;
+//   this.noises= noises;
+//   this.friends= friends;
+// }
+
+// var sheep = new AnimalCreator("Cloud",
+//   "sheep",
+//   "You can count on me!",
+//   ["baahhh", "arrgg", "chewchewchew"],[]);
+// var cow = new addFriend("Moo", "cow", "You can count on me", ["maaa"], ["camel"]);
+// console.log(sheep.friends.apply(cow));
+
 function addFriend(username, species, tagline, noises, friends) {
   return {
     username: username,
     species: species,
     tagline: tagline,
     noises: noises,
-    friends: friends
+    friends:friends
   };
 }
 var sheep = addFriend(
@@ -125,8 +124,9 @@ var sheep = addFriend(
   "sheep",
   "You can count on me!",
   ["baahhh", "arrgg", "chewchewchew"],
-  []
+  [ sheep.friends.cow]
 );
-var cow = addFriend("Moo", "cow", "You can count on me", "maaa", []);
+var cow = addFriend("Moo", "cow", "You can count on me", ["maaa"], ["camel"]);
+addFriend(sheep,cow);
 console.log(sheep);
 module.exports.addFriend = addFriend;

@@ -18,9 +18,13 @@
  */
 
 // TODO: your code goes here.
+function splitString(arr) {
+  var splitWords = arr.split(",");
+  return splitWords;
+}
+splitString("shadow,laika");
 
-// uncomment the line below once you have written your code
-// module.exports.splitString = splitString;
+module.exports.splitString = splitString;
 
 /**
  * 2 - Custom delimitter
@@ -33,9 +37,13 @@
  */
 
 // TODO: your code goes here
+function splitStringCustom(arg1, arg2) {
+  var remColon = arg1.split(arg2);
+  return remColon;
+}
+splitStringCustom("car:bike:auto", ":");
 
-// uncomment the line below once you have written your code
-// module.exports.splitStringCustom = splitStringCustom;
+module.exports.splitStringCustom = splitStringCustom;
 
 /**
  * 3 - Creating a string from an array
@@ -60,8 +68,13 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.joinArray = joinArray;
+function joinArray(arrays) {
+  var joinComma = arrays.join(",");
+  return joinComma;
+}
+joinArray(["john", "jane", "michael"]);
+
+module.exports.joinArray = joinArray;
 
 /**
  * 4 - Custom delimitter
@@ -74,9 +87,13 @@
  */
 
 // TODO: your code goes here
+function joinArrayCustom(array1, array2) {
+  var joinColon = array1.join(array2);
+  return joinColon;
+}
+joinArrayCustom(["car", "bike", "auto"], ":");
 
-// uncomment the line below once you have written your code
-// module.exports.joinArrayCustom = joinArrayCustom;
+module.exports.joinArrayCustom = joinArrayCustom;
 
 /**
  * 5 - Add an item to the beginning of an array
@@ -93,8 +110,13 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.setFirstItem = setFirstItem;
+function setFirstItem(arrFirst, arrSec) {
+  var addItemFront = arrFirst.unshift(arrSec);
+  return arrFirst;
+}
+setFirstItem(["foo", "bar"], "baz");
+
+module.exports.setFirstItem = setFirstItem;
 
 /**
  * 6 - Remove an item from the end of an array
@@ -108,5 +130,10 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.removeLastItem = removeLastItem;
+function removeLastItem(arr) {
+  var remItem = arr.pop();
+  return arr;
+}
+removeLastItem(["foo", "bar", "baz"]);
+
+module.exports.removeLastItem = removeLastItem;

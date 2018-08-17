@@ -10,8 +10,16 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.arraySum = arraySum;
+function arraySum(arrays) {
+  var sum = 0;
+  for (var i = 0; i < arrays.length; i++) {
+    sum += arrays[i];
+  }
+  return sum;
+}
+arraySum([1, 2, 3]);
+
+module.exports.arraySum = arraySum;
 
 /**
  * 2 - Write a function - onlyEvenNumbers - that takes an array of numbers
@@ -24,8 +32,17 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.onlyEvenNumbers = onlyEvenNumbers;
+function onlyEvenNumbers(arr) {
+  var evenArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evenArr.push(arr[i]);
+    }
+  }
+  return evenArr;
+}
+onlyEvenNumbers([1, 2, 3, 4, 5, 6]);
+module.exports.onlyEvenNumbers = onlyEvenNumbers;
 
 /**
  * 3 - Write a function - getSpecies - that takes an array of animal objects (from the previous exercise)
@@ -44,8 +61,24 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.getSpecies = getSpecies;
+var animals = [
+  {
+    username: "Cloud",
+    species: "sheep",
+    tagline: "You can count on me!",
+    noises: ["baahhh", "arrgg", "chewchewchew"],
+    friends: []
+  }
+];
+function getSpecies(animals) {
+  const arg = animals.map(function(item) {
+    return { species: item.species };
+  });
+  return arg;
+}
+getSpecies(animals);
+
+module.exports.getSpecies = getSpecies;
 
 /**
  * 4 - Write a function - getMaleUsers - that takes an array of users
@@ -67,8 +100,23 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.getMaleUsers = getMaleUsers;
+function getMaleUsers(users) {
+  const result = users.filter(user => {
+    return user.gender === "male";
+  });
+  return result;
+}
+getMaleUsers([
+  {
+    username: "john",
+    gender: "male"
+  },
+  {
+    username: "jane",
+    gender: "female"
+  }
+]);
+module.exports.getMaleUsers = getMaleUsers;
 
 /**
  * 5 - Write a function - multiply - that takes an array on numbers
@@ -80,5 +128,14 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.multiply = multiply;
+function multiply(arrays) {
+  var newArray = [];
+  for (var i = 0; i < arrays.length; i++) {
+    var arr = arrays[i] * 2;
+    newArray.push(arr);
+  }
+  return newArray;
+}
+multiply([1, 2, 3]);
+
+module.exports.multiply = multiply;
