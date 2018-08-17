@@ -15,7 +15,7 @@
  * variable - A different property name is assigned to variable on each iteration
  * object - The object we want to iterate.
  */
-
+let objects = require("./Exercise1.js");
 var obj = { a: 1, b: 2, c: 3 };
 
 for (const prop in obj) {
@@ -38,7 +38,10 @@ for (const prop in obj) {
  */
 
 // TODO: write your `for...in` loop here
-
+var dog=objects.dog;
+for(const props in dog){
+  console.log(`${props}=${dog[props]}`);
+}
 /**
  * Method 2 - using `Object.keys()`
  *
@@ -76,3 +79,8 @@ keysInObj.forEach(key => {
  */
 
 // TODO: write your `Object.keys(obj)` loop here
+
+var keysInPerson = Object.keys(person);
+keysInPerson.forEach(item =>{
+  console.log(`${item}=${person[item]}`);
+});

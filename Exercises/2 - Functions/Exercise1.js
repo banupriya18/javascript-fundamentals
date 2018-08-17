@@ -14,9 +14,11 @@
  * */
 
 // TODO: your code goes here
-
-// uncomment the line below once you have written your code
-// module.exports.sum = sum
+function sum(a, b) {
+  return a + b;
+}
+sum(2, 7);
+module.exports.sum = sum;
 
 /**
  * 2 - multiply
@@ -25,9 +27,11 @@
  * */
 
 // TODO: your code goes here
-
-// uncomment the line below once you have written your code
-// module.exports.multiply = multiply
+function multiply(a, b) {
+  return a * b;
+}
+multiply(2, 3);
+module.exports.multiply = multiply;
 
 /**
  * 3 - fullName
@@ -37,9 +41,13 @@
  * */
 
 // TODO: your code goes here
+function fullName(firstName, lastName) {
+  return firstName + " " + lastName;
+}
 
-// uncomment the line below once you have written your code
-// module.exports.fullName = fullName
+fullName("Banu", "Priya");
+
+module.exports.fullName = fullName;
 
 /**
  * 4 - createPerson
@@ -50,5 +58,15 @@
 
 // TODO: your code goes here
 
-// uncomment the line below once you have written your code
-// module.exports.createPerson = createPerson
+function createPerson(name, age, gender) {
+  return {
+    name: name,
+    age: age,
+    gender:gender
+  };
+}
+
+let user = createPerson("John", 30,"male");
+console.log(`My name is ${user.name}.I am ${user.age} years old ${user.gender}`);
+
+module.exports.createPerson = createPerson;

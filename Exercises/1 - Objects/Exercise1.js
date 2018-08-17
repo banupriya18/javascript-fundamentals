@@ -21,7 +21,7 @@ var dog = {
   name: "Shadow",
   bark: function() {
     console.log("Bow bow!");
-  },
+  }
 };
 
 // Method 2 - Object constructor
@@ -50,8 +50,18 @@ dog.bark = function() {
 
 // TODO: your code goes here.
 
+var person = {
+  name: "John",
+  age: 32,
+  gender: "male",
+  talk: function() {
+    console.log(
+      `my name is ${this.name} .I am a ${this.age} year old ${this.gender}`
+    );
+  }
+};
 // uncomment the line below once you have written your code
-// module.exports.person = person
+module.exports.person = person;
 
 /**
  * Create an animal object using the Object constructor.
@@ -69,6 +79,13 @@ dog.bark = function() {
  */
 
 // TODO: your code goes here
-
+var animal = new Object();
+animal.type = "dog";
+animal.breed = "persian";
+animal.name = "Johny";
+animal.age = 3;
+animal.talk = function() {
+  console.log("Talking....");
+};
 // uncomment the line below once you have written your code
-// module.exports.animal = animal
+module.exports.animal = animal;
